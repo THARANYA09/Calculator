@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <script>
+        function calc()
+        {
+            var num1=parseFloat(document.getElementById('num1').value);
+            var num2=parseFloat(document.getElementById('num2').value);
+            var o=document.getElementById('operators').value;
+      
+            if(o === '+')
+            {
+                document.getElementById('result').value=num1+num2;
+            }
+            if(o === '-')
+            {
+                document.getElementById('result').value=num1-num2;
+            }
+            if(o === '*')
+            {
+                document.getElementById('result').value=num1*num2;
+            }
+            if(o === '/')
+            {
+                document.getElementById('result').value=num1/num2;
+            }
+            if(o === '%')
+            {
+                document.getElementById('result').value=num1%num2;
+            }
+        }
+    </script>
+  </head>
+<body>
+    <h1>CALCULATOR</h1>
+    1st NUMBER <input type="text" id="num1"><br/><br/>
+    2nd NUMBER <input type="text" id="num2"><br/><br/>
+    <select id="operators">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <p>RESULT</p>
+    <button onclick="calc();">SUBMIT</button>
+    <input type="text" id="result"/>
+</body>
+</html>
